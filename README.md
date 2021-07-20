@@ -1,1 +1,1 @@
-# ToDo
+# Todo App using HTML, CSS, & JavaScript
