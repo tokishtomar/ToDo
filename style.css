@@ -1,0 +1,393 @@
+body {
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+#main-container {
+  max-width: 100rem;
+  margin: 3rem 15rem;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin-bottom: 30px;
+}
+
+.heading-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading-1 {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 1.7rem 1px 1.2rem 0rem;
+}
+
+.heading-2 {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+.click-btn {
+  cursor: pointer;
+}
+
+.add-item-box {
+  display: inline;
+  font-size: 4rem;
+  font-weight: 100;
+  margin-left: 4px;
+}
+
+.heading-3 {
+  font-size: 4rem;
+  font-weight: 100;
+  margin: 1.75rem 0rem 0.5rem 0rem;
+}
+
+.popup {
+  visibility: hidden;
+  background-color: white;
+  position: fixed;
+  top: 40%;
+  left: 35%;
+  height: 14rem;
+  width: 28rem;
+  border: 1px solid orangered;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(25%);
+  transition: all 0.75s;
+}
+
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-25%);
+  transition: all 0.75s;
+}
+
+.add-new-list-item {
+  font: 400 1.5rem "Roboto", sans-serif;
+  color: orangered;
+  margin: 0.75rem;
+  font-weight: 400;
+}
+
+.btn-container {
+  width: 15rem;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 400;
+  margin-top: 0.75rem;
+}
+
+.btn-container button {
+  background-color: orangered;
+  font: 400 1.5rem "Open Sans", sans-serif;
+  color: white;
+  height: 2.75rem;
+  width: 6.25rem;
+  border: 0px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.input-box {
+  border: 1px solid orangered;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 1px rgb(201, 199, 199);
+  text-align: center;
+  height: 2.5rem;
+  width: 20rem;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.card-item,
+.card-item-2 {
+  position: relative;
+  min-height: 25rem;
+  min-width: 18rem;
+  border: 1px solid orangered;
+  border-radius: 0.65rem;
+  text-align: center;
+  background-color: white;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-container {
+  margin: 0rem 1rem 1rem 0rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.item-heading-1,
+.item-heading-2 {
+  min-width: 14rem;
+  display: inline-block;
+  padding-top: 1rem;
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: orangered;
+  margin-top: 6px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  padding: 5px;
+}
+
+li {
+  color: black;
+  font-size: large;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.markDone {
+  background-color: rgb(77, 125, 228);
+  margin-left: 0.5rem;
+  border-radius: 10px;
+  color: white;
+  border: 0px;
+  cursor: pointer;
+}
+
+.marked {
+  color: orangered;
+  text-decoration: line-through;
+}
+
+#grid-container {
+  display: none;
+  height: 28rem;
+  max-width: 50rem;
+  margin: 4.5rem 12rem;
+  margin-bottom: 30px;
+  grid-template-columns: 7rem auto;
+  grid-row: 4rem auto;
+  justify-items: center;
+}
+
+#back-button {
+  grid-row: 1 / 3;
+  cursor: pointer;
+}
+
+.subHeading-1 {
+  display: inline;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #main-container {
+    margin: 5rem 2rem;
+  }
+
+  .heading-1 {
+    font-size: 50px;
+    margin-left: 2rem;
+  }
+
+  .heading-2 {
+    font-size: 50px;
+  }
+
+  .heading-3 {
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
+
+  i::before {
+    display: block;
+  }
+
+  .add-item-box {
+    font-size: 50px;
+  }
+
+  .click-btn {
+    margin-bottom: 10px;
+  }
+
+  #footer {
+    display: block;
+  }
+
+  .popup {
+    font-size: 3rem;
+    top: 43%;
+    left: 26%;
+    height: 13rem;
+    width: 25rem;
+  }
+
+  .input-box {
+    height: 2rem;
+    width: 15rem;
+  }
+
+  .btn-container {
+    justify-content: center;
+  }
+
+  .btn-container button {
+    margin-left: 15px;
+    font-size: 1rem;
+    width: 4rem;
+    height: 2rem;
+    font-weight: 100;
+  }
+
+  #card-container {
+    justify-content: space-around;
+  }
+
+  .card-item {
+    min-height: 20rem;
+    min-width: 17rem;
+  }
+
+  .item-heading-1 {
+    min-width: 17rem;
+    font-size: 25px;
+    height: 50px;
+    cursor: pointer;
+    color: orangered;
+    justify-content: flex-start;
+    text-align: center;
+    border-bottom: 0px;
+  }
+
+  .bi-trash-fill {
+    margin-top: 14px;
+  }
+
+  #grid-container {
+    margin: 5rem 2rem;
+    grid-template-columns: 3rem 12rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  #main-container {
+    margin: 32px 1.2rem;
+  }
+
+  .heading-1,
+  .heading-2 {
+    font-size: 39px;
+  }
+
+  .heading-3,
+  i::before {
+    font-size: 28px;
+  }
+
+  .click-btn {
+    margin-bottom: 10px;
+  }
+
+  .add-item-box,
+  .icon-container,
+  #list-1 {
+    display: none;
+  }
+
+  #footer {
+    display: block;
+  }
+
+  .popup {
+    font-size: 1.5rem;
+    top: 40%;
+    left: 8%;
+    height: 12.5rem;
+    width: 19rem;
+  }
+
+  .input-box {
+    height: 2rem;
+    width: 15rem;
+  }
+
+  .btn-container {
+    justify-content: center;
+  }
+
+  .btn-container button {
+    margin-left: 15px;
+    font-size: 1rem;
+    width: 4rem;
+    height: 2rem;
+    font-weight: 100;
+  }
+
+  #card-container {
+    justify-content: space-around;
+  }
+
+  .card-item {
+    min-height: 2rem;
+    min-width: 17rem;
+  }
+
+  .item-heading-1 {
+    min-width: 17rem;
+    font-size: 25px;
+    height: 50px;
+    cursor: pointer;
+    color: orangered;
+    justify-content: flex-start;
+    text-align: center;
+    border-bottom: 0px;
+  }
+
+  .bi-trash-fill {
+    margin-top: 14px;
+  }
+
+  #grid-container {
+    margin: 5rem 2rem;
+    grid-template-columns: 3rem 12rem;
+  }
+}
